@@ -1,0 +1,36 @@
+﻿<Window x:Class="AuctionManagerApp.Views.AuctionDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Auction Details" Height="400" Width="600">
+
+    <!-- Link to external styles -->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <!-- Auction Details Form -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Start Date:" Style="{StaticResource LabelStyle}" />
+            <DatePicker SelectedDate="{Binding StartDate}" Width="200" Margin="5" />
+
+            <TextBlock Text="End Date:" Style="{StaticResource LabelStyle}" />
+            <DatePicker SelectedDate="{Binding EndDate}" Width="200" Margin="5" />
+
+            <TextBlock Text="Starting Price:" Style="{StaticResource LabelStyle}" />
+            <TextBox Text="{Binding StartingPrice}" Style="{StaticResource TextBoxStyle}" />
+
+            <TextBlock Text="Buyout Price:" Style="{StaticResource LabelStyle}" />
+            <TextBox Text="{Binding BuyoutPrice}" Style="{StaticResource TextBoxStyle}" />
+
+            <TextBlock Text="Status:" Style="{StaticResource LabelStyle}" />
+            <TextBox Text="{Binding Status}" Style="{StaticResource TextBoxStyle}" />
+
+            <Button Content="Save" Command="{Binding SaveAuctionCommand}" Style="{StaticResource ButtonStyle}" />
+        </StackPanel>
+    </Grid>
+</Window>

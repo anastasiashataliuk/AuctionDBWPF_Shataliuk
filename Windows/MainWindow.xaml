@@ -1,0 +1,24 @@
+﻿<Window x:Class="AuctionManagerApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Auction Manager" Height="350" Width="525">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="0,30,0,0" Text="Welcome to Auction Manager" Style="{StaticResource LabelStyle}"/>
+
+        <!-- Buttons for navigation -->
+        <Button Content="Go to Auctions" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Margin="0,100,0,0" Click="GoToAuctionsButton_Click" Style="{StaticResource ButtonStyle}"/>
+        <Button Content="Add Product" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Margin="0,160,0,0" Click="AddProductButton_Click" Style="{StaticResource ButtonStyle}"/>
+        <Button Content="Log Out" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Margin="0,220,0,0" Click="LogoutButton_Click" Style="{StaticResource ButtonStyle}"/>
+
+        <!-- Add a button to open the UserWindow -->
+        <Button Content="Manage Users" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Margin="0,280,0,0" Click="OpenUserWindow_Click" Style="{StaticResource ButtonStyle}"/>
+    </Grid>
+</Window>
